@@ -49,16 +49,17 @@ namespace API
         {
             try
             {
-                var folha = _ctx.Folha
+                 var folhas = _ctx.Folha
                     .Include(f => f.Funcionario) // Carrega os dados do Funcionário
-                    .SingleOrDefault(f => f.Funcionario.CPF == cpf && f.mes == mes && f.ano == ano);
+                    .Where(f => f.Funcionario.CPF == cpf && f.mes == mes && f.ano == ano)
+                    .ToList();
 
-                if (folha == null)
+                if (folhas == null)
                 {
                     return NotFound();
                 }
 
-                return Ok(folha);
+                return Ok(folhas);
             }
             catch (Exception e)
             {

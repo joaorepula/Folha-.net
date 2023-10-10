@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(AppDataContext))]
-    [Migration("20231010001354_novamigration")]
+    [Migration("20231010002519_novamigration")]
     partial class novamigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
