@@ -1,0 +1,11 @@
+### Listar Categorias ###
+GET https://localhost:7150/api/funcionario/listar
+
+### Criar Categoria ###
+POST https://localhost:7150/api/funcionario/cadastrar
+Content-Type: application/json
+
+{
+    "Nome": "Athletico paranaense",
+    "CPF": "877779858920"
+}
